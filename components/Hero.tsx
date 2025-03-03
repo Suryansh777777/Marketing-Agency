@@ -114,10 +114,53 @@ const Hero = () => {
             className="text-xl text-[#7b7b7b] mb-8"
           >
             We are a full-service digital innovation partner that <br /> helps
-            businesses of all sizes to achieve their goals through digital
-            marketing.
+            businesses to achieve their goals through digital marketing.
           </motion.p>
+          <motion.div
+            initial={hasAnimated ? "visible" : "hidden"}
+            animate="visible"
+            variants={buttonVariants}
+            className="flex gap-x-2 md:gap-x-6 justify-center mb-10"
+          >
+            <Link
+              href="/projects"
+              className="bg-black text-white px-5 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-medium transition-all hover:shadow-lg"
+            >
+              View our Work
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-rose-500 text-white px-5 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-medium transition-all hover:shadow-lg"
+            >
+              Book a Meeting
+            </Link>
+          </motion.div>
         </div>
+      </motion.div>
+      {/* Video Container */}
+      <motion.div
+        className="flex justify-center w-full"
+        initial={hasAnimated ? "visible" : "hidden"}
+        animate="visible"
+        variants={videoContainerVariants}
+      >
+        <motion.div
+          style={{
+            width: videoWidth,
+            borderRadius: videoBorderRadius,
+            scale: videoScale,
+            overflow: "hidden",
+          }}
+          className="relative w-full md:w-auto"
+        >
+          <video
+            src="/hero-video.mp4"
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover pointer-events-none"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
