@@ -1,4 +1,5 @@
 import Faq from "@/components/Faq";
+import Footer from "@/components/Footer";
 import Founders from "@/components/Founders";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -16,6 +17,7 @@ const Home = () => {
       <Founders />
       <Stats />
       <Faq />
+      <Footer />
     </div>
   );
 };
