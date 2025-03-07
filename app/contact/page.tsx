@@ -17,7 +17,7 @@ const Contact = () => {
       <div
         className=" bg-white
     flex flex-col  w-full  
-     overflow-clip inset-0 -z-10  my-14
+     overflow-clip inset-0 -z-10 pt-20 md:pt-0  my-14
     "
       >
         <div className="md:px-0 px-6 xl:w-4/5 2xl:w-[68%] justify-between md:mt-14 md:flex mx-auto  ">
