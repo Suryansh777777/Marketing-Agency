@@ -17,7 +17,7 @@ const Contact = () => {
       <div
         className=" bg-white
     flex flex-col  w-full  
-     overflow-clip inset-0 -z-10  my-10
+     overflow-clip inset-0 -z-10  my-14
     "
       >
         <div className="md:px-0 px-6 xl:w-4/5 2xl:w-[68%] justify-between md:mt-14 md:flex mx-auto  ">
@@ -50,9 +50,10 @@ const Contact = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                variants={checkItemVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: index * 1.8 }}
                 className="flex gap-x-4 py-4"
               >
                 <PiCheckCircle className=" rounded-md text-[#3d80d7] text-2xl flex-shrink-0" />
